@@ -8,7 +8,7 @@ import Testimonials from "./components/home/Testimonials";
 import PowerAgain from "./components/home/PowerAgain";
 import TrustedProvider from "./components/home/TrustedProvider";
 import WhyChoose from "./components/home/WhyChoose";
-import WhyItWorks from "./components/home/WhyItWorks";
+import HowItWorks from "./components/home/HowItWorks";
 import Hero from "./components/home/Hero";
 
 import LenisSmoothScroll from "./utils/LenisSmoothScrool";
@@ -101,7 +101,7 @@ const Home = () => {
           <Hero ref={heroRef} />
           <TrustedProvider />
           <WhyChoose />
-          <WhyItWorks ref={howItWorksRef} />
+          <HowItWorks ref={howItWorksRef} />
           <Testimonials ref={testimonialRef} />
 
           <PowerAgain />
