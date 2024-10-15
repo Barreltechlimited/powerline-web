@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 
-const poppins = Poppins({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   style: ["normal", "italic"],
@@ -28,7 +28,7 @@ export default function RootLayout({
         <link rel="icon" href="../icons/hivenify-logo.svg" />
       </head>
       <Toaster />
-      <body className={`${poppins.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
