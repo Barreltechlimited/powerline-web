@@ -30,7 +30,7 @@ const Hero = React.forwardRef<HTMLElement, {}>((props, ref) => {
         />
       </div>
 
-      <div className="w-11/12 max-w-screen-xl mx-auto py-[50px] md:py-[100px] relative z-10 text-white flex flex-col md:flex-row gap-20 items-center justify-between">
+      <div className="w-11/12 max-w-screen-xl mx-auto py-[70px] md:py-[100px] relative z-10 text-white flex flex-col md:flex-row gap-20 items-center justify-between">
         <div className="w-full md:w-1/2 flex flex-col gap-10 items-start justify-start">
           <h1 className="text-4xl md:text-5xl font-bold text-center md:text-left">
             Manage and Pay your{" "}

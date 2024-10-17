@@ -48,7 +48,7 @@ const whyChooseContent = [
 
 const WhyChoose = () => {
   return (
-    <div className="bg-[#0A102E] ">
+    <section className="bg-[#0A102E] ">
       <div className="w-11/12 max-w-screen-xl mx-auto py-[70px] ">
         <h2 className="text-white font-semibold text-[25px] sm:text-[30px] lg:text-[40px] w-1/2 leading-none mb-[45px]">
           Why Choose PowerLine?
@@ -72,7 +72,7 @@ const WhyChoose = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
