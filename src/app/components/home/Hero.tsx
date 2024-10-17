@@ -30,20 +30,20 @@ const Hero = React.forwardRef<HTMLElement, {}>((props, ref) => {
         />
       </div>
 
-      <div className="w-11/12 max-w-screen-xl mx-auto py-[100px] relative z-10 text-white flex flex-row gap-20 items-center justify-between">
+      <div className="w-11/12 max-w-screen-xl mx-auto py-[50px] md:py-[100px] relative z-10 text-white flex flex-col md:flex-row gap-20 items-center justify-between">
         <div className="w-full md:w-1/2 flex flex-col gap-10 items-start justify-start">
-          <h1 className="text-5xl font-bold">
+          <h1 className="text-4xl md:text-5xl font-bold text-center md:text-left">
             Manage and Pay your{" "}
             <span className="text-[#E89D07]">Electricity</span> bills with Ease.
           </h1>
-          <p className="text-white text-2xl">
+          <p className="text-white text-xl md:text-2xl text-center md:text-left">
             Our secure and effective platform simplifies your electricity bill
             payments, ensuring uninterrupted service while saving you time and
             effort.
           </p>
         </div>
 
-        <div className="w-full md:w-1/3 rounded-xl  px-[35px] py-[25px] bg-[#FFFFFF] opacity-80">
+        <div className="w-full md:w-1/2  lg:w-1/3 rounded-xl  px-[35px] py-[25px] bg-[#FFFFFF] opacity-80">
           <div className="text-[#131313] flex flex-col justify-center items-center gap-2 ">
             <Image
               src="/icons/token.svg"
@@ -90,7 +90,7 @@ const Hero = React.forwardRef<HTMLElement, {}>((props, ref) => {
                   className="bg-[#0752E8] text-white py-6 px-4 rounded-md mt-2"
                   disabled={isSubmitting}
                 >
-                  Get Instant Token!
+                  Get Token!
                 </button>
               </Form>
             )}
