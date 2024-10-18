@@ -38,9 +38,9 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
         ref={ref}
         className="bg-white text-black w-11/12 max-w-screen-xl mx-auto pt-[70px]"
       >
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-            <div>
+        <div className="">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 sm:gap-16 mb-8 justify-between">
+            <div className="lg:col-span-2">
               <Link href="/">
                 <Image
                   src="/img/powerline-logo.svg"
@@ -55,7 +55,7 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 payments anytime, anywhere.
               </p>
             </div>
-            <div>
+            <div className="lg:col-span-1">
               <h3 className="font-bold mb-2 text-xl">Links</h3>
               <ul className="text-sm">
                 <li
@@ -85,7 +85,7 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="lg:col-span-1">
               <h3 className="font-bold mb-2 text-xl">Legal</h3>
               <ul className="text-sm">
                 <li className="mb-2">
@@ -105,9 +105,9 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="lg:col-span-2">
               <h3 className="font-bold mb-2 text-xl">Newsletter</h3>
-              <p className="text-sm mb-2">
+              <p className="text-sm mb-4">
                 The platform is incredibly easy to use. I can pay my electricity
                 bill in just a few clicks!
               </p>
