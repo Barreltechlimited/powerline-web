@@ -10,3 +10,20 @@ body {
 @layer utilities {
   
 }
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #02311610;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0752E8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0752E8;
+}
