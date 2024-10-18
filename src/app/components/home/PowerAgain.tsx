@@ -28,7 +28,7 @@ const PowerAgain = () => {
 
   return (
     <section className="">
-      <div className="w-11/12 max-w-screen-xl mx-auto px-[56px] py-[25px] bg-[#F2F2F2] rounded-xl">
+      <div className="w-11/12 max-w-screen-xl mx-auto px-[25px] sm:px-[56px] py-[25px] bg-[#F2F2F2] rounded-xl">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="w-full sm:w-2/3  md:w-1/2 my-6 sm:my-0 md:mb-0">
             <h2 className="text-black font-semibold text-[25px] sm:text-[30px] lg:text-[40px] leading-none mb-[25px] text-center sm:text-left">
