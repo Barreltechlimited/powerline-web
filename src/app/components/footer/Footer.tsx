@@ -38,12 +38,9 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
         ref={ref}
         className="bg-white text-black w-11/12 max-w-screen-xl mx-auto pt-[70px]"
       >
-        {/* <button onClick={() => handleNavigation("contactUsRef")}>
-          Go to Contact Us
-        </button> */}
 
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             <div>
               <Link href="/">
                 <Image
@@ -63,7 +60,7 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
               <h3 className="font-bold mb-2 text-xl">Links</h3>
               <ul className="text-sm">
                 <li
-                  className="mb-2 hover:text-black/50"
+                  className="mb-2 hover:text-black/50 cursor-pointer"
                   onClick={() => {
                     handleNavigation("heroRef");
                   }}
@@ -71,7 +68,7 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
                   Home (Top)
                 </li>
                 <li
-                  className="mb-2 hover:text-black/50"
+                  className="mb-2 hover:text-black/50 cursor-pointer"
                   onClick={() => {
                     handleNavigation("howItWorksRef");
                   }}
@@ -80,7 +77,7 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 </li>
 
                 <li
-                  className="mb-2 hover:text-black/50"
+                  className="mb-2 hover:text-black/50 cursor-pointer"
                   onClick={() => {
                     handleNavigation("testimonialRef");
                   }}
@@ -122,23 +119,23 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
                 onSubmit={handleSubmit}
               >
                 {({ isSubmitting }) => (
-                  <Form className="flex">
-                    <div className="flex-1">
+                  <Form className="flex border border-[#0752E8] rounded-md">
+                    <div className="flex-1 relative">
                       <Field
                         type="email"
                         name="email"
                         placeholder="Enter Your Email Address"
-                        className="bg-white text-black px-4 py-2 rounded-l w-full focus:outline-none border-[#0752E8]"
+                        className="bg-white text-black px-4 py-2 rounded-l-md  w-full focus:outline-none border-[#0752E8]"
                       />
                       <ErrorMessage
                         name="email"
                         component="div"
-                        className="text-red-500 text-sm mt-1"
+                        className="text-red-500 text-xs mt-1 absolute -bottom-4"
                       />
                     </div>
                     <button
                       type="submit"
-                      className="bg-[#0752E8] text-black px-4 py-2 rounded-r hover:bg-[#0752E8]/50 transition duration-200"
+                      className="bg-[#0752E8] text-black px-4 py-2 rounded-r-md hover:bg-[#0752E8]/50 transition duration-200"
                       disabled={isSubmitting}
                     >
                       <Image
