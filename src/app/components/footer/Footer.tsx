@@ -38,66 +38,79 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
         ref={ref}
         className="bg-white text-black w-11/12 max-w-screen-xl mx-auto pt-[70px]"
       >
-        <button onClick={() => handleNavigation("contactUsRef")}>
+        {/* <button onClick={() => handleNavigation("contactUsRef")}>
           Go to Contact Us
-        </button>
+        </button> */}
 
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-bold mb-2">Powerline</h3>
+              <Link href="/">
+                <Image
+                  src="/img/powerline-logo.svg"
+                  alt="Hivenify Logo"
+                  width={241}
+                  height={52}
+                  className="w-[130px] h-auto mb-3"
+                />
+              </Link>
               <p className="text-sm">
                 Powering your convenience with secure, seamless electricity bill
                 payments anytime, anywhere.
               </p>
             </div>
             <div>
-              <h3 className="font-bold mb-2">Links</h3>
+              <h3 className="font-bold mb-2 text-xl">Links</h3>
               <ul className="text-sm">
-                <li className="mb-1">
-                  <a href="#" className="hover:text-gray-300">
-                    How it works
-                  </a>
+                <li
+                  className="mb-2 hover:text-black/50"
+                  onClick={() => {
+                    handleNavigation("heroRef");
+                  }}
+                >
+                  Home (Top)
                 </li>
-                <li className="mb-1">
-                  <a href="#" className="hover:text-gray-300">
-                    Contact us
-                  </a>
+                <li
+                  className="mb-2 hover:text-black/50"
+                  onClick={() => {
+                    handleNavigation("howItWorksRef");
+                  }}
+                >
+                  How it works
                 </li>
-                <li className="mb-1">
-                  <a href="#" className="hover:text-gray-300">
-                    Testimonial
-                  </a>
-                </li>
-                <li className="mb-1">
-                  <a href="#" className="hover:text-gray-300">
-                    Blogs
-                  </a>
+
+                <li
+                  className="mb-2 hover:text-black/50"
+                  onClick={() => {
+                    handleNavigation("testimonialRef");
+                  }}
+                >
+                  Testimonial
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="font-bold mb-2">Legal</h3>
+              <h3 className="font-bold mb-2 text-xl">Legal</h3>
               <ul className="text-sm">
-                <li className="mb-1">
-                  <a href="#" className="hover:text-gray-300">
+                <li className="mb-2">
+                  <a href="#" className="hover:text-black/50">
                     Terms of use
                   </a>
                 </li>
-                <li className="mb-1">
-                  <a href="#" className="hover:text-gray-300">
+                <li className="mb-2">
+                  <a href="#" className="hover:text-black/50">
                     Privacy policy
                   </a>
                 </li>
-                <li className="mb-1">
-                  <a href="#" className="hover:text-gray-300">
+                <li className="mb-2">
+                  <a href="#" className="hover:text-black/50">
                     Cookie policy
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="font-bold mb-2">Newsletter</h3>
+              <h3 className="font-bold mb-2 text-xl">Newsletter</h3>
               <p className="text-sm mb-2">
                 The platform is incredibly easy to use. I can pay my electricity
                 bill in just a few clicks!
@@ -115,7 +128,7 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
                         type="email"
                         name="email"
                         placeholder="Enter Your Email Address"
-                        className="bg-gray-700 text-black px-4 py-2 rounded-l w-full focus:outline-none"
+                        className="bg-white text-black px-4 py-2 rounded-l w-full focus:outline-none border-[#0752E8]"
                       />
                       <ErrorMessage
                         name="email"
@@ -125,11 +138,16 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
                     </div>
                     <button
                       type="submit"
-                      className="bg-blue-600 text-black px-4 py-2 rounded-r hover:bg-blue-700 transition duration-200"
+                      className="bg-[#0752E8] text-black px-4 py-2 rounded-r hover:bg-[#0752E8]/50 transition duration-200"
                       disabled={isSubmitting}
                     >
-                      {/* Replace with icon or text */}
-                      {isSubmitting ? "Submitting..." : "Subscribe"}
+                      <Image
+                        src="/icons/send.svg"
+                        alt="Send Icon"
+                        width={23}
+                        height={26}
+                        className="w-[23] h-auto"
+                      />
                     </button>
                   </Form>
                 )}
@@ -137,8 +155,12 @@ const Footer = React.forwardRef<HTMLElement, FooterProps>(
             </div>
           </div>
           <div className="text-center text-sm border-t mt-5 py-6 flex flex-row justify-between items-center">
-            <p className="font-medium hidden sm:block sm:text-sm">Privacy & Terms</p>
-            <p className="font-medium text-xs sm:text-sm">Copyright @{currentYear} Powerline</p>
+            <p className="font-medium hidden sm:block sm:text-sm">
+              Privacy & Terms
+            </p>
+            <p className="font-medium text-xs sm:text-sm">
+              Copyright @{currentYear} Powerline
+            </p>
             <div className="flex flex-row gap-2 sm:gap-4 items-center">
               <Link href={"/"}>
                 <Image
