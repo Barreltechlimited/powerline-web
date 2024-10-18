@@ -81,7 +81,7 @@ const Hero = React.forwardRef<HTMLElement, {}>((props, ref) => {
                   <ErrorMessage
                     name="meterNumber"
                     component="div"
-                    className="text-red-500 mt-1"
+                    className="text-red-500 mt-1 text-xs"
                   />
                 </div>
 
