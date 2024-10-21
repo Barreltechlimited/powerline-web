@@ -25,7 +25,7 @@ const HowItWorksContent = [
   },
 ];
 
-const HowItWorks = React.forwardRef<HTMLElement, {}>((props, ref) => {
+const HowItWorks = React.forwardRef<HTMLElement, object>((props, ref) => {
   return (
     <section ref={ref} className="">
       <div className="w-11/12 max-w-screen-xl mx-auto py-[70px]">

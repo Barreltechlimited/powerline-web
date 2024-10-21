@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-const Hero = React.forwardRef<HTMLElement, {}>((props, ref) => {
+const Hero = React.forwardRef<HTMLElement, object>((props, ref) => {
   const validationSchema = Yup.object({
     meterNumber: Yup.string()
       .matches(/^[0-9]{11}$/, "Meter number must be exactly 11 digits")

@@ -67,7 +67,7 @@ const testimonials = [
   },
 ];
 
-const Testimonials = React.forwardRef<HTMLElement, {}>((props, ref) => {
+const Testimonials = React.forwardRef<HTMLElement, object>((props, ref) => {
   return (
     <section ref={ref} className="">
       <div className="w-11/12 max-w-screen-xl mx-auto pb-[70px]">

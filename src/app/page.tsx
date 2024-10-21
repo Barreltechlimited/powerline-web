@@ -23,7 +23,7 @@ const Home = () => {
   const testimonialRef = useRef<HTMLElement | null>(null);
   const contactUsRef = useRef<HTMLElement | null>(null);
 
-  const [currentSection, setCurrentSection] = useState<string>("");
+  // const [currentSection, setCurrentSection] = useState<string>("");
 
   const scrollToRef = (ref: React.RefObject<HTMLElement>, section: string) => {
     const navbarHeight = 108;
@@ -32,7 +32,7 @@ const Home = () => {
         top: ref.current.offsetTop - navbarHeight,
         behavior: "smooth",
       });
-      setCurrentSection(section);
+      // setCurrentSection(section);
     }
   };
 
