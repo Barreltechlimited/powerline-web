@@ -75,4 +75,5 @@ const HowItWorks = React.forwardRef<HTMLElement, {}>((props, ref) => {
   );
 });
 
+HowItWorks.displayName = "HowItWorks";
 export default HowItWorks;

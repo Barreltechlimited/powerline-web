@@ -99,4 +99,5 @@ const Testimonials = React.forwardRef<HTMLElement, {}>((props, ref) => {
   );
 });
 
+Testimonials.displayName = "Testimonials";
 export default Testimonials;
