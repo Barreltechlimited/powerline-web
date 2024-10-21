@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState, Suspense } from "react";
-import { useSearchParams, useRouter, usePathname } from "next/navigation";
+import { useSearchParams, useRouter} from "next/navigation";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
@@ -17,7 +17,6 @@ const Home = () => {
   const searchParams = useSearchParams();
   const sectionFromUrl = searchParams.get("section");
   const router = useRouter();
-  const pathname = usePathname();
 
   const heroRef = useRef<HTMLElement | null>(null);
   const howItWorksRef = useRef<HTMLElement | null>(null);
