@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState, Suspense } from "react";
-import { useSearchParams, useRouter} from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
@@ -14,10 +14,6 @@ import Hero from "./components/home/Hero";
 import LenisSmoothScroll from "./utils/LenisSmoothScrool";
 
 const Home = () => {
-  const searchParams = useSearchParams();
-  const sectionFromUrl = searchParams.get("section");
-  const router = useRouter();
-
   const heroRef = useRef<HTMLElement | null>(null);
   const howItWorksRef = useRef<HTMLElement | null>(null);
   const testimonialRef = useRef<HTMLElement | null>(null);
@@ -35,6 +31,39 @@ const Home = () => {
       setCurrentSection(section);
     }
   };
+
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <HomeContent
+        heroRef={heroRef}
+        howItWorksRef={howItWorksRef}
+        testimonialRef={testimonialRef}
+        contactUsRef={contactUsRef}
+        currentSection={currentSection}
+        scrollToRef={scrollToRef}
+      />
+    </Suspense>
+  );
+};
+
+const HomeContent = ({
+  heroRef,
+  howItWorksRef,
+  testimonialRef,
+  contactUsRef,
+  currentSection,
+  scrollToRef,
+}: {
+  heroRef: React.RefObject<HTMLElement>;
+  howItWorksRef: React.RefObject<HTMLElement>;
+  testimonialRef: React.RefObject<HTMLElement>;
+  contactUsRef: React.RefObject<HTMLElement>;
+  currentSection: string;
+  scrollToRef: (ref: React.RefObject<HTMLElement>, section: string) => void;
+}) => {
+  const searchParams = useSearchParams();
+  const sectionFromUrl = searchParams.get("section");
+  const router = useRouter();
 
   useEffect(() => {
     if (sectionFromUrl) {
@@ -92,26 +121,24 @@ const Home = () => {
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <div>
-        <LenisSmoothScroll>
-          <Header handleNavigation={handleNavigation} />
+    <div>
+      <LenisSmoothScroll>
+        <Header handleNavigation={handleNavigation} />
 
-          <Hero ref={heroRef} />
-          <TrustedProvider />
-          <WhyChoose />
-          <HowItWorks ref={howItWorksRef} />
-          <Testimonials ref={testimonialRef} />
+        <Hero ref={heroRef} />
+        <TrustedProvider />
+        <WhyChoose />
+        <HowItWorks ref={howItWorksRef} />
+        <Testimonials ref={testimonialRef} />
 
-          <PowerAgain />
+        <PowerAgain />
 
-          <Footer
-            ref={contactUsRef}
-            handleNavigation={handleNavigation}
-          />
-        </LenisSmoothScroll>
-      </div>
-    </Suspense>
+        <Footer
+          ref={contactUsRef}
+          handleNavigation={handleNavigation}
+        />
+      </LenisSmoothScroll>
+    </div>
   );
 };
 
