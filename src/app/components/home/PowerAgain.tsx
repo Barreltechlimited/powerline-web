@@ -53,7 +53,7 @@ const PowerAgain = () => {
                       type="text"
                       name="meterNumber"
                       placeholder="Enter 11-digit Meter Number"
-                      className="border-none rounded-l-md py-6 px-4 w-full bg-white text-gray-700 focus:outline-none"
+                      className="border-none rounded-l-md py-5 sm:py-6 px-3 sm:px-4 w-full bg-white text-gray-700 focus:outline-none"
                     />
                     <ErrorMessage
                       name="meterNumber"
@@ -64,7 +64,7 @@ const PowerAgain = () => {
 
                   <button
                     type="submit"
-                    className="bg-blue-600 whitespace-nowrap text-white py-6 px-4 rounded-r-md hover:bg-blue-700 transition duration-200"
+                    className="bg-blue-600 whitespace-nowrap text-white py-5 sm:py-6 px-3 sm:px-4 rounded-r-md hover:bg-blue-700 transition duration-200"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Processing..." : "Get Token"}

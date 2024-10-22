@@ -66,7 +66,7 @@ const WhyChoose = () => {
                   height={40}
                 />
               </div>
-              <h3 className="text-xl font-medium mb-2">{item.title}</h3>
+              <h3 className="text-lg sm:text-xl font-medium mb-2">{item.title}</h3>
               <p className="text-sm text-gray-300 ">{item.description}</p>
             </div>
           ))}
