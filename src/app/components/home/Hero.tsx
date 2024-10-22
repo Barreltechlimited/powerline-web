@@ -32,7 +32,7 @@ const Hero = React.forwardRef<HTMLElement, object>((props, ref) => {
 
       <div className="w-11/12 max-w-screen-xl mx-auto py-[70px] md:py-[100px] relative z-10 text-white flex flex-col md:flex-row gap-20 items-center justify-between">
         <div className="w-full md:w-1/2 flex flex-col gap-10 items-start justify-start">
-          <h1 className="text-4xl md:text-5xl font-bold text-center md:text-left">
+          <h1 className="text-[32px] md:text-5xl font-bold text-center md:text-left">
             Manage and Pay your{" "}
             <span className="text-[#E89D07]">Electricity</span> bills with Ease.
           </h1>
@@ -52,7 +52,7 @@ const Hero = React.forwardRef<HTMLElement, object>((props, ref) => {
               height={85}
               className="w-[85px] h-[85px]"
             />
-            <h4 className="text-xl font-semibold">Get Instant Token!</h4>
+            <h4 className="text-lg sm:text-xl font-semibold">Get Instant Token!</h4>
             <p className="text-sm text-center w-full md:w-3/4">
               Tokens will be promptly credited to your account upon successful
               payment.
@@ -76,7 +76,7 @@ const Hero = React.forwardRef<HTMLElement, object>((props, ref) => {
                     id="meterNumber"
                     name="meterNumber"
                     placeholder="Enter 11-digit Meter Number"
-                    className="py-6 px-4 rounded-md w-full bg-[#F2F2F5] text-[#8A8A8A]"
+                    className="py-5 sm:py-6 px-3 sm:px-4 rounded-md w-full bg-[#F2F2F5] text-[#8A8A8A]"
                   />
                   <ErrorMessage
                     name="meterNumber"
@@ -87,7 +87,7 @@ const Hero = React.forwardRef<HTMLElement, object>((props, ref) => {
 
                 <button
                   type="submit"
-                  className="bg-[#0752E8] text-white py-6 px-4 rounded-md mt-2"
+                  className="bg-[#0752E8] text-white py-5 sm:py-6 px-3 sm:px-4 rounded-md mt-2"
                   disabled={isSubmitting}
                 >
                   Get Token!
