@@ -10,7 +10,7 @@ import TrustedProvider from "./components/home/TrustedProvider";
 import WhyChoose from "./components/home/WhyChoose";
 import HowItWorks from "./components/home/HowItWorks";
 import Hero from "./components/home/Hero";
-
+import Loader from "./components/loader/Loader";
 import LenisSmoothScroll from "./utils/LenisSmoothScrool";
 
 const Home = () => {
@@ -33,7 +33,7 @@ const Home = () => {
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loader />}>
       <HomeContent
         heroRef={heroRef}
         howItWorksRef={howItWorksRef}
@@ -133,10 +133,7 @@ const HomeContent = ({
 
         <PowerAgain />
 
-        <Footer
-          ref={contactUsRef}
-          handleNavigation={handleNavigation}
-        />
+        <Footer ref={contactUsRef} handleNavigation={handleNavigation} />
       </LenisSmoothScroll>
     </div>
   );
